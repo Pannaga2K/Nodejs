@@ -1,0 +1,15 @@
+<%- include("../partials/header"); %>
+<div class="container">
+	<h1 class="text-center">
+		ENTER AN ANIME WITH AN IMAGE:
+	</h1>
+	<div class="box">
+		<form class="text-center" action="/anime" method="POST">
+			<input class="form-control mr-sm-2 temp" type="text" name="name" placeholder="Name">
+			<!-- <input class="form-control mr-sm-2 temp" type="text" name="image" placeholder="Image"> -->
+			<!-- <input class="form-control mr-sm-2 temp" type="number" name="episodes" placeholder="Episodes"> -->
+			<button class="btn btn-dark sub">SUBMIT</button>
+		</form>
+	</div>	
+</div>	
+<%- include("../partials/footer"); %>

@@ -1,0 +1,60 @@
+<%- include("../partials/header") %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 sh">
+			<div class="sh__info">
+				<div class="col-md-3">
+					<img src="<%=anime.posterImage%>" class="" alt="...">	
+					<h2 class=""><%= anime.name %></h2>
+				</div>
+				<div class="col-md-9">
+					<ul class="detailsList" style="background:black;color:white;">
+						<li class="">EPISODES: <%= anime.episodes %></li>
+						<li class="">START DATE: <%= anime.startDate %></li>
+						<li class="">END DATE: <%= anime.endDate %></li>
+						<li class="">RATING: <%= anime.rating %></li>
+						<li class="">STATUS: <%= anime.status %></li>
+						<li class="">SUBMITTED BY <%=anime.author.username.toUpperCase()%><br/><%= moment(anime.createdAt).fromNow() %></li>
+					</ul>
+					<% if(currentUser) { %>
+						<% if(anime.author.id.equals(currentUser._id)){ %>
+							<button class="btn btn-dark"><a href="/anime/<%=anime._id%>/edit">EDIT</a></button>
+							<!-- <button class="btn btn-dark"><a href="/anime" class="card-link">GO BACK</a></button> -->
+							<form class="inl" action="/anime/<%=anime._id%>?_method=DELETE" method="POST">
+								<button class="btn btn-dark btn-large">DELETE</button>
+							</form>
+						<% } %>
+					<% } %>
+				</div>
+			</div>
+			
+			<div class="well">
+				<div class="text-right">
+					<a class="btn btn-dark" href="/anime/<%=anime._id%>/comments/new">ADD NEW COMMENT</a>
+				</div>
+				<% anime.comments.forEach(function(comment){ %>
+					<div class="row">
+						<div class="col-md-12">
+							<strong><%=comment.author.username%></strong>
+							<span class="pull-right" style="margin:0px;"><%= moment(comment.createdAt).fromNow() %></span>
+							<p><%=comment.title%></p>
+							<% if(currentUser) { %>
+								<% if(comment.author.id.equals(currentUser._id)){ %>
+									<button class="btn btn-large btn-dark"><a href="/anime/<%=anime._id%>/comments/<%=comment._id%>/edit">EDIT</a></button>
+									<form class="form-inline inl" action="/anime/<%=anime._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+										<button class="btn btn-large btn-dark clr">DELETE</button>
+								</form>
+								<% } %>
+							<% } %>
+						</div>
+					</div>
+				<% }); %>
+			</div>
+			<!-- <div class="player" >
+				<iframe width="600px" height="400px" src="https://www.youtube.com/embed/<%= anime.youtubeTrailerId %>" />
+			</div> -->
+		</div>	
+	</div>
+</div>
+	
+<%- include("../partials/footer") %>

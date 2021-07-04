@@ -1,0 +1,13 @@
+<%- include("partials/header"); %>
+<h1 class="text-center">
+	CREATE AN ACCOUNT
+</h1>
+
+<div class="box">
+	<form class="text-center" action="/register" method="POST">
+		<input class="form-control mr-sm-2 temp" type="text" name="username" placeholder="Username">
+		<input class="form-control mr-sm-2 temp" type="password" name="password" placeholder="Password">
+		<input class="btn btn-dark sub" type="submit" value="SUBMIT">
+	</form>
+</div>
+<%- include("partials/footer"); %>

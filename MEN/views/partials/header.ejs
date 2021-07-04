@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ANIME</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/ext.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark navbar-expand-md py-0">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/anime">AN-I/ME</a>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tN">
+    				<span class="navbar-toggler-icon"></span>
+  				</button>
+				<div class="collapse navbar-collapse" id="tN">
+					<ul class="nav navbar-nav navbar-right">
+						<% if(!currentUser){ %>
+							<li class="nav-item"><a class="nav-link" href="/login">LOGIN</a></li>
+							<li class="nav-item"><a class="nav-link" href="/register">SIGN UP</a></li>
+						<% } else { %>
+							<li class="nav-item"><a class="nav-link" href="/profile">SIGNED IN AS <%= currentUser.username.toUpperCase()%></a></li>
+							<li class="nav-item"><a class="nav-link" href="/logout">LOGOUT</a></li>
+						<% } %>	
+					</ul>
+				</div>
+			</div>	
+		</nav>
+
+		<div class="container">
+			<% if(error && error.length>0){ %>
+				<div class="alert alert-dark" role="alert"><%=error%></div>
+			<% } %>
+			<% if(success && success.length>0){ %>
+				<div class="alert alert-dark" role="alert"><%=success%></div>
+			<% } %>
+		</div>
+
+		

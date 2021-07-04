@@ -1,0 +1,25 @@
+<%- include("partials/header"); %>
+<div class="ui main container text segment">
+	<div class="ui huge header">AN-I/ME</div>
+	<form class="ui form" action="/anime" method="POST">
+		<div class="field">
+			<label style="color:grey;">TITLE</label>
+			<input type="text" name="anime[title]" placeholder="TITLE">
+		</div>
+		<div class="field">
+			<label style="color:grey;">IMAGE</label>
+			<input type="text" name="anime[image]" placeholder="IMAGE">
+		</div>
+		<div class="field">
+			<label style="color:grey;">EPISODES</label>
+			<input type="number" name="anime[episodes]" placeholder="EPISODES">
+		</div>
+		<div class="field">
+			<label style="color:grey;">CHARACTER</label>
+			<input type="text" name="anime[character]" placeholder="CHARACTER">
+		</div>
+		<input class="ui black inverted big button" type="submit" placeholder="SUBMIT">
+	</form>
+</div>
+
+<%- include("partials/footer"); %>

@@ -1,0 +1,27 @@
+<%- include("partials/header"); %>
+<div class="ui main text container">
+	<div class="ui header huge">AN-I/ME</div>
+	<div class="ui items" >
+		<% anime.forEach(function(anime) { %>
+			<div class="item">
+				<div class="image">
+					<img src="<%= anime.image %>">
+				</div>
+				<div class="content" style="color:grey;">
+					<a style="color:grey;" href="/anime/<%= anime._id %>" class="grey header"><%=anime.title%></a>
+					<div class="meta">
+						<span class="grey"><%= anime.updated.toDateString() %></span>
+					</div>
+					<div class="description">
+						<span class="grey">EPISODES : <%= anime.episodes %></span>
+					</div>
+					<div class="extras custom__button " >
+						<a class="ui floated inverted white button" href="/anime/<%= anime._id %>">EXPLORE MORE</a>	
+					</div>
+				</div>
+			</div>
+		<% }); %>
+	</div>
+</div>
+
+<%- include("partials/footer"); %>

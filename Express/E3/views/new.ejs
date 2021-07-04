@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+<div>
+	<h1> ANIME : </h1>
+	<ul>
+		<% anyme.forEach(function(x){ %>
+			<li class="touchup"><%= x %></li>
+		<% }); %>
+	</ul>	
+</div>
+<form action="/addanime" method="POST">
+	<input type="text" name="newAnime" placeholder="ANIME">
+	<button>ADD ANIME</button>
+</form>
+<%- include('partials/footer'); -%>

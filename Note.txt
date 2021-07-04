@@ -1,0 +1,15 @@
+NODE JS
+    - request
+    - body-parser
+    - passport
+    - passport-local
+    - connect-flash
+
+EXPRESS
+    - express
+    - express-session
+    - method-override
+
+MONGO
+    - mongoose
+    - passport-local-mongoose

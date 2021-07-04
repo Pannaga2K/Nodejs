@@ -1,0 +1,13 @@
+<%- include("partials/header"); %>
+<div class="ui main container text segment">
+	<div class="ui huge header"><%= anime.title.toUpperCase() %></div>
+	<img class="image" src="<%= anime.image %>">
+	<p>EPISODES : <%= anime.episodes %></p>
+	<p><%= anime.updated.toDateString() %></p>
+	<p><%= anime.character %></p>
+	<a class="ui inverted grey button" href="/anime/<%=anime._id%>/edit">EDIT</a>
+	<form id="line" action="/anime/<%=anime._id%>?_method=DELETE" method="POST">
+		<button class="ui inverted button">DELETE</button>
+	</form>
+</div>
+<%- include("partials/footer"); %>

@@ -1,0 +1,14 @@
+<%- include("partials/header"); %>
+<h1 class="text-center">
+	LOGIN
+</h1>
+<div class="box">
+	<form class="text-center" action="/login" method="POST">
+		<input class="form-control mr-sm-2 temp" type="text" name="username" placeholder="Username">
+		<input class="form-control mr-sm-2 temp" type="password" name="password" placeholder="Password"><br>
+		<button class="btn btn-dark sub">SUBMIT</button>
+		<!-- <input class="" type="submit" value="SUBMIT"> -->
+	</form>
+	<a href="/login/forgotPw">FORGOT PASSWORD</a>
+</div>
+<%- include("partials/footer"); %>

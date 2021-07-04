@@ -1,0 +1,27 @@
+<%- include("partials/header"); %>
+
+<h1 class="text-center">AN-I/ME - <%=currentUser.username.toUpperCase()%></h1>
+<% if(message){ %>
+	<h1 class="text-center"><%=message%></h1>
+<% } else { %>
+	<div class="container">
+		<div class="row">
+			<% anime.forEach(function(x){ %>
+				<div class="col-lg-3 col-md-3 col-sm-6 text-center">
+					<div class="thumbnail">
+						<a href="/anime/<%= x._id %>"><img src="<%= x.image %>"></a>
+						<div class="caption">
+							<%= x.name.toUpperCase() %>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+<% } %>
+<div class="text-center">
+	USER SINCE <%= moment(currentUser.createdAt).fromNow() %><br/>
+	<a href="profile/changePassword">CHANGE PASSWORD</a>
+</div>
+
+<%- include("partials/footer"); %>

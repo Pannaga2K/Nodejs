@@ -1,0 +1,35 @@
+body {
+	background:black;
+	color:grey;
+}
+
+i.icon {
+	font-size:2em;
+}
+
+.container.main {
+	margin-top:7em;
+	background:black;
+}
+
+.huge.header {
+	color:grey;
+}
+
+#line {
+	display: inline;
+}
+
+.grey {
+	color:grey;
+}
+
+img {
+	width: 200px;
+	height: auto;
+	object-fit: contain;
+}
+
+.custom__button {
+	margin-top: 100px !important;
+}

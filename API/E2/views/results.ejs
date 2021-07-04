@@ -1,0 +1,16 @@
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/new.css">
+<h1> LIST OF MOVIES/SERIES THAT YOU HAVE SEARCHED: </h1>
+<div>
+	<ul>
+		<% data["Search"].forEach(function(x){ %>
+			<li class="title">TITLE : <%= x.Title %></li>
+				<ul>
+					<li class="year">YEAR : <%= x.Year %></li>	
+					<li class="poster">POSTER : <img src=<%= x.Poster %>></li>	
+				</ul>
+		<% }); %>	
+	</ul>
+</div>
+<a href="/">SEARCH AGAIN</a>
+	

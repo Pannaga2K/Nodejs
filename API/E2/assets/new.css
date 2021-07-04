@@ -1,0 +1,19 @@
+body {
+	font-family: 'Anton', sans-serif;
+}
+ul {
+	margin:0 auto;
+	list-style:none;
+}
+.title {
+	color:green;
+}
+.year {
+	color:blue;
+}
+.poster {
+	color:yellow;
+}
+input {
+	margin:0 auto;
+}

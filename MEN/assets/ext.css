@@ -1,0 +1,168 @@
+*::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background:black;
+	font-family: "Oswald", sans-serif;
+}
+/* header.ejs */
+
+nav {
+	background: transparent;
+	z-index: 1;
+}
+
+/* new.ejs */
+.shiftr {
+	padding-left:43%;
+}
+
+.row {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.thumbnail,  .caption {
+	color:green;
+	font-weight:bold;
+}
+
+img {
+	width:250px;
+	height:300px;
+}
+
+.banner__home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	margin-bottom: 150px;
+}
+
+.global__image {
+	width: 100%;
+	height: 100vh;
+}
+
+.global__image > img {
+	width: 100vw;
+	height: auto;
+	object-fit: cover;
+	z-index: -1;
+	opacity: 0.4;
+}
+
+.container__home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	color: whitesmoke;
+	z-index: 1;
+}
+
+p {
+	width: fit-content;
+}
+
+.thumbnail {
+	width: 300px;
+	height: auto;
+	object-fit: contain;
+}
+
+/* forms.ejs */
+.box {
+	width:400px;
+	margin:0 auto;
+	height:300px;
+	background:black;
+	text-align:center;
+}
+
+.temp {
+	display:block;
+	background:none;
+	border:3px solid grey;
+	outline:none;
+	color:white;
+	margin:25px auto;
+	width:400px;
+	/* border-radius:10px; */
+}
+
+.temp:hover {
+	border-color:#FFF;
+}
+
+.temp:focus {
+	background:black;
+	color:White;
+}
+
+.sub {
+	display:block;
+	background:none;
+	border:3px solid grey;
+	outline:none;
+	color:white;
+	margin:0 auto;
+	width:400px;
+	/* border-radius:10px; */
+	transition:0.25s;
+}
+/* show.ejs */
+.sh {
+	width: 100%;
+	height: fit-content;
+	background:black;
+	color:white;
+}
+
+.sh__info {
+	display:flex;
+}
+
+div > ul {
+	list-style-type: none;
+}
+
+div > ul > li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 5px;
+}
+
+div.sh__info > button {
+	display: inline-flex;
+}
+
+.well {
+	padding: 5px;
+}
+
+.inl {
+	display:inline;
+}
+
+.fw {
+	flex-wrap: wrap;
+}
+
+a, a:hover {
+	color: grey;
+	text-decoration: none;
+}
+
+.container {
+	/* position: absolute; */
+	z-index: 1;
+}
+
+.detailsList {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}

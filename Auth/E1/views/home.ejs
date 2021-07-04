@@ -1,0 +1,14 @@
+<%- include("partials/header"); %>
+<h1>
+	HELLO THIS IS THE ROOT PAGE!
+</h1>
+
+<div>
+	<% if(!currentUser) { %>
+		<a href="/register" >REGISTER</a>
+		<a href="/login" >LOGIN</a>
+	<% } else { %>
+		<a href="/logout">LOGOUT</a>
+	<% } %>
+</div>
+<%- include("partials/footer"); %>

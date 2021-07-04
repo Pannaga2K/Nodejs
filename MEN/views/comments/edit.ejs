@@ -1,0 +1,15 @@
+<%- include("../partials/header"); %>
+<div class="container">
+	<h1 class="text-center">
+		EDIT THE COMMENT
+	</h1>
+	<div class="box">
+		<form class="text-center" action="/anime/<%=aid%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+			<input class="form-control mr-sm-2 temp" type="text" name="comments[title]" value="<%=comment.title%>">
+			<!-- <input class="form-control mr-sm-2 temp" type="text" name="comments[author]" placeholder="AUTHOR"> -->
+			<!-- <input class="form-control mr-sm-2 temp" type="text" name="info" placeholder="Info"> -->
+			<input class="btn btn-dark" type="submit">
+		</form>
+	</div>	
+</div>	
+<%- include("../partials/footer"); %>

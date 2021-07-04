@@ -1,0 +1,28 @@
+<%- include("../partials/header"); %>
+
+<div class="banner__home" >
+	<div class="global__image position-relative" >
+		<img src="https://wallpapercave.com/wp/wp6955309.jpg" alt="..." />
+	</div>
+	<div class="container__home position-absolute">
+		<p>WELCOME OTAKU!!!</p>
+		<a class="btn btn-dark btn-large" href="/anime/add">ADD NEW</a>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<% anime.forEach(function(x){ %>
+			<div class="col-lg-3 col-md-3 col-sm-6 text-center">
+				<div class="thumbnail">
+					<a href="/anime/<%= x._id %>"><img src="<%= x.posterImage %>"></a>
+					<div class="caption">
+						<%= x.name.toUpperCase() %>
+					</div>
+				</div>
+			</div>
+		<% }); %>
+	</div>
+</div>
+
+
+<%- include("../partials/footer"); %>

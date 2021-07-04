@@ -1,0 +1,15 @@
+<%- include("../partials/header"); %>
+<div class="container">
+	<h1>
+		ENTER THE COMMENT FOR <%= anime.name.toUpperCase() %>
+	</h1>
+	<div class="box">
+		<form class="form-inline text-center" action="/anime/<%=anime._id%>/comments" method="POST">
+			<input class="form-control mr-sm-2 temp" type="text" name="comments[title]" placeholder="TITLE">
+			<!-- <input class="form-control mr-sm-2 temp" type="text" name="comments[author]" placeholder="AUTHOR"> -->
+			<!-- <input class="form-control mr-sm-2 temp" type="text" name="info" placeholder="Info"> -->
+			<input class="btn btn-outline-success sub" type="submit">
+		</form>
+	</div>	
+</div>	
+<%- include("../partials/footer"); %>

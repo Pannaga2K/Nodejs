@@ -1,0 +1,17 @@
+<%- include("partials/header"); %>
+
+<h1 class="text-center">
+	ENTER THE USERNAME
+</h1>
+
+<div class="box">
+	<form class="text-center" action="/login/forgotPw" method="POST">
+		<input class="form-control mr-sm-2 temp" type="text" name="username" placeholder="Username">
+		<input class="form-control mr-sm-2 temp" type="password" name="password" placeholder="New Password"><br>
+		<input class="form-control mr-sm-2 temp" type="password" name="confirm_password" placeholder="Confirm Password"><br>
+		<button class="btn btn-dark sub">SUBMIT</button>
+	</form>
+</div>
+
+
+<%- include("partials/footer"); %>
